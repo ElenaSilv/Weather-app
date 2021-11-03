@@ -16,9 +16,9 @@ li {
   list-style: none;
 }
 
-#date-time {
+.overview {
   color: rgb(103, 104, 104);
-  margin: 0;
+  margin-left: -38px;
   padding: 0;
 }
 
@@ -39,4 +39,22 @@ li {
   position: relative;
   top: 52px;
   left: -20px;
+}
+
+.weather-temp img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temp strong {
+  color: rgb(103, 104, 104);
+  line-height: 1;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.weather-temp .unit {
+  position: relative;
+  top: -34px;
 }

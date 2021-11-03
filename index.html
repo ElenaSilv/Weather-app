@@ -30,16 +30,24 @@
         <div class="row">
           <div class="col-6">
             <h1>CITY</h1>
-            <ul id="date-time">
-              <li>Day, N Month</li>
-              <li>Time</li>
-              <li>Weather</li>
-            </ul>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Cloudy"
-            />
-            12 C°| F°
+            <div class="overview">
+              <ul>
+                <li>Day, N Month</li>
+                <li>Time</li>
+                <li>Weather</li>
+              </ul>
+            </div>
+            <div class="clearfix weather-temp">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy"
+                class="float-left"
+              />
+              <div class="float-left">
+                <strong>12</strong>
+                <span class="unit">C° | <a href="#">F°</a></span>
+              </div>
+            </div>
             <ul id="extra-info">
               <li>Precipitation: 0%</li>
               <li>Humidity:73%</li>
