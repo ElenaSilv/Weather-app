@@ -1,0 +1,42 @@
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Prompt", sans-serif;
+}
+
+h1 {
+  color: rgb(82, 83, 83);
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 45px;
+}
+
+li {
+  list-style: none;
+}
+
+#date-time {
+  color: rgb(103, 104, 104);
+  margin: 0;
+  padding: 0;
+}
+
+#extra-info {
+  font-size: 12px;
+  margin: 0 20;
+  padding: 0;
+}
+
+#weekdays {
+  color: rgb(103, 104, 104);
+  position: relative;
+  top: 52px;
+}
+
+#weektemp {
+  color: rgb(103, 104, 104);
+  position: relative;
+  top: 52px;
+  left: -20px;
+}

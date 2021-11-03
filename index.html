@@ -16,6 +16,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
@@ -23,8 +29,8 @@
       <div class="card">
         <div class="row">
           <div class="col-6">
-            <h3>CITY</h3>
-            <ul>
+            <h1>CITY</h1>
+            <ul id="date-time">
               <li>Day, N Month</li>
               <li>Time</li>
               <li>Weather</li>
@@ -34,14 +40,14 @@
               alt="Cloudy"
             />
             12 C°| F°
-            <ul>
+            <ul id="extra-info">
               <li>Precipitation: 0%</li>
               <li>Humidity:73%</li>
               <li>Wind:2 km/h</li>
             </ul>
           </div>
           <div class="col-3">
-            <ul>
+            <ul id="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tue</li>
@@ -52,7 +58,7 @@
             </ul>
           </div>
           <div class="col-3">
-            <ul>
+            <ul id="weektemp">
               <li>9°/16°</li>
               <li>10°/14°</li>
               <li>9°/17°</li>
