@@ -10,10 +10,12 @@ h1 {
   font-size: 30px;
   font-weight: 100;
   line-height: 45px;
+  text-transform: uppercase;
 }
 
 li {
   list-style: none;
+  text-transform: capitalize;
 }
 
 .overview {
