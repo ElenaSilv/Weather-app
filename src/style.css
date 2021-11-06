@@ -60,3 +60,7 @@ li {
   position: relative;
   top: -34px;
 }
+
+form {
+  padding: 10px 0;
+}
