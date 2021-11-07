@@ -17,10 +17,16 @@ function displayTemp(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city) {
+  let apiKey = "36627385a0b4fa9441ba14c41f6e63ca";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemp);
+}
+
 function showCity(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#which-city");
-  console.log(cityInputElement.value);
+  search(cityInputElement.value);
 }
 
 let now = new Date();
@@ -65,10 +71,5 @@ realTime.innerHTML = `${currentHour}:${currentMinute}`;
 let realDate = document.querySelector("#date");
 realDate.innerHTML = `${currentDay}, ${currentDate} ${currentMonth}`;
 
-let apiKey = "36627385a0b4fa9441ba14c41f6e63ca";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemp);
-
 let submitCity = document.querySelector("#submit-city");
-submitCity.addEventListener("sumbit", showCity);
+submitCity.addEventListener("submit", showCity);
