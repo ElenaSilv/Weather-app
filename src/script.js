@@ -5,7 +5,10 @@ function displayTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   let windELement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
-  tempElement.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  tempElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
@@ -27,6 +30,23 @@ function showCity(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#which-city");
   search(cityInputElement.value);
+}
+
+function convertFarenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  celsiusConversion.classList.remove("active");
+  farenheitConversion.classList.add("active");
+  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(farenheitTemp);
+}
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  celsiusConversion.classList.add("active");
+  farenheitConversion.classList.remove("active");
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let now = new Date();
@@ -71,5 +91,15 @@ realTime.innerHTML = `${currentHour}:${currentMinute}`;
 let realDate = document.querySelector("#date");
 realDate.innerHTML = `${currentDay}, ${currentDate} ${currentMonth}`;
 
+let celsiusTemperature = null;
+
 let submitCity = document.querySelector("#submit-city");
 submitCity.addEventListener("submit", showCity);
+
+let farenheitConversion = document.querySelector("#fahrenheit");
+farenheitConversion.addEventListener("click", convertFarenheit);
+
+let celsiusConversion = document.querySelector("#celsius");
+celsiusConversion.addEventListener("click", displayCelciusTemp);
+
+search("New York");

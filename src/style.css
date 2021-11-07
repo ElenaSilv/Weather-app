@@ -64,3 +64,12 @@ li {
 form {
   padding: 10px 0;
 }
+
+.active {
+  color: rgb(103, 104, 104);
+  cursor: pointer;
+}
+
+.active:hover {
+  text-decoration: none;
+}
