@@ -55,8 +55,9 @@ li {
 
 .weather-temp img {
   margin-right: 10px;
-  height: 64px;
-  width: 64px;
+  margin-top: -10px;
+  height: 90px;
+  width: 90px;
 }
 
 .weather-temp strong {
