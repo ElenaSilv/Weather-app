@@ -42,23 +42,6 @@ function showCity(event) {
   search(cityInputElement.value);
 }
 
-function convertFarenheit(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temp");
-  celsiusConversion.classList.remove("active");
-  farenheitConversion.classList.add("active");
-  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(farenheitTemp);
-}
-
-function displayCelciusTemp(event) {
-  event.preventDefault();
-  celsiusConversion.classList.add("active");
-  farenheitConversion.classList.remove("active");
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let now = new Date();
 
 let days = [
@@ -101,16 +84,8 @@ realTime.innerHTML = `${currentHour}:${currentMinute}`;
 let realDate = document.querySelector("#date");
 realDate.innerHTML = `${currentDay}, ${currentDate} ${currentMonth}`;
 
-let celsiusTemperature = null;
-
 let submitCity = document.querySelector("#submit-city");
 submitCity.addEventListener("submit", showCity);
-
-let farenheitConversion = document.querySelector("#fahrenheit");
-farenheitConversion.addEventListener("click", convertFarenheit);
-
-let celsiusConversion = document.querySelector("#celsius");
-celsiusConversion.addEventListener("click", displayCelciusTemp);
 
 search("London");
 
