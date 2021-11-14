@@ -30,17 +30,27 @@ li {
   padding: 0;
 }
 
-#weekdays {
+.weekdays {
   color: rgb(103, 104, 104);
   position: relative;
   top: 52px;
+  line-height: 28px;
 }
 
-#weektemp {
+.weektemp {
   color: rgb(103, 104, 104);
   position: relative;
   top: 52px;
   left: -20px;
+  line-height: 28px;
+}
+
+.maxtemp {
+  font-weight: bolder;
+}
+
+.mintemp {
+  color: rgb(163, 163, 163);
 }
 
 .weather-temp img {
@@ -72,4 +82,15 @@ form {
 
 .active:hover {
   text-decoration: none;
+}
+
+#weatherimg {
+  margin-right: 20px;
+}
+
+.weather-forecast {
+  white-space: nowrap;
+}
+#weatherunit {
+  display: inline-block;
 }

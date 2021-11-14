@@ -103,3 +103,31 @@ let celsiusConversion = document.querySelector("#celsius");
 celsiusConversion.addEventListener("click", displayCelciusTemp);
 
 search("New York");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="row">
+      <div class="col-5" id="weatherunit">
+       <img
+       id="weatherimg"
+       src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+       width="42"
+       />
+       <span class="weather-forecast-day"> ${day} 
+       </span>
+       <span class="maxtemp"> 16°
+       </span>
+       <span class="mintemp">/9°
+       </span>
+      </div>
+     </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
