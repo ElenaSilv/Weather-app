@@ -1,15 +1,23 @@
 .card {
   max-width: 600px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 30px;
   font-family: "Prompt", sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 252, 214) 0%,
+    rgba(255, 102, 102, 0.44) 90%
+  );
+  border: 1px solid rgb(218, 91, 45);
+  border-radius: ;
 }
 
 h1 {
   color: rgb(82, 83, 83);
-  font-size: 30px;
+  font-size: 45px;
+  font-style: bold;
   font-weight: 100;
-  line-height: 45px;
+  line-height: 55px;
   text-transform: uppercase;
 }
 
